@@ -79,8 +79,8 @@
 }
 
 .img-big {
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -155,7 +155,7 @@ ul {
 }
 
 .top-bar {
-  float: left;
+ 
 }
 
 .content-img {
@@ -183,10 +183,18 @@ ul {
 }
 
 input {
-  width: 93%;
+  width: 90%;
   margin-left: 17px;
   margin-right: 17px;
   border: 1.5px solid #979797;
+}
+
+textarea {
+  width: 90%;
+  margin-left: 17px;
+  margin-right: 17px;
+  border: 1.5px solid #979797;
+  resize: none;
 }
 
 .input-title {
@@ -200,7 +208,7 @@ input {
 }
 
 .add-btn {
-  width: 93%;
+  width: 90%;
   margin-top: 30px;
   margin-left: 17px;
   margin-right: 17px;
@@ -214,4 +222,163 @@ input {
 
 .new-item {
   margin-top: 50px;
+}
+
+.menu-items {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .row {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .first {
+    width: 100px;
+  }
+  
+  .third {
+    width: 75px;
+    z-index: auto;
+    position: static;
+    margin-right: auto;
+  }
+  
+  .second {
+    width: 425px;
+    font-weight: bold;
+  }
+
+  .details {
+    width: 250px;
+  }
+
+  .ul {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .topnav {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: none;
+  }
+
+  .logo-menu {
+    display: none;
+  }
+
+  .menu-items {
+    display: flex;
+    justify-content: center;
+  }
+
+  #list-menu-item {
+    text-decoration: underline;
+  }
+
+  .active {
+    display: none !important;
+  }
+
+  .new-item {
+    text-align: center;
+  }
+
+  .new-item-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .input-title-wrapper {
+    width: 120px;
+  }
+
+  .input-title { 
+    text-align: left;
+  }
+
+  .input-wrapper {
+    margin-top: 8px; 
+    width: 480px;
+    text-align: left;
+  }
+
+  input {
+    width: 200px;
+  }
+
+  .input-description {
+    width: 400px;
+    margin-left: 17px;
+    margin-right: 17px;
+    border: 1.5px solid #979797;
+    height: 8em;
+  }
+
+  .add-btn {
+    width: 200px;
+    margin-left: -110px;
+    background-color: #3B3B3B;
+    color: white;
+    border: none;
+  }
+
+  .details-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+  }
+
+  .top-bar {
+    height: auto;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+  }
+
+  .logo-back {
+    position: static;
+  }
+  
+  .logo-delete {
+    position: static;
+    float: right;
+  }
+
+  .desktop-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-img {
+    margin-left: 18px;
+    width: 200px;
+  }
+
+  .content-text {
+    position: relative;
+    width: 400px;
+  }
+
+  .title {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    text-align: left;
+  }
+
+  .name {
+    position: absolute;
+    left: 50px;
+    top: 210px;
+    font-size: 2em;
+  }
 }
