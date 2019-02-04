@@ -9,6 +9,7 @@ class Details extends Component {
         super(props);
 
         this.state = {
+            title: "DETAILS",
             redirect: false
         };
     }

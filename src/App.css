@@ -120,13 +120,13 @@ ul {
 
 .third {
   position: absolute;
-  top: 60px; 
+  z-index: -1;
   left: 100px;
-  width: 200px;
+  top: 60px;
 }
 
 .second {
-  width: 700px;
+  width: 400px;
   font-weight: bold;
 }
 
@@ -136,7 +136,7 @@ ul {
 }
 
 .details {
-  width: 400px;
+  width: 250px;
 }
 
 .top-bar-logo {
