@@ -10,13 +10,22 @@ class Details extends Component {
     super(props);
 
     this.state = {
+      id: this.props.location.id,
+      name: this.props.location.name,
+      img_url: this.props.location.img_url,
+      price: this.props.location.price,
+      description: this.props.location.description,
+      deleteFromList: this.props.location.deleteFromList,
       redirect: false
     };
   }
 
   handleDelete = () => {
-    this.props.location.deleteFromList(this.props.location.id);
-    this.setState({ redirect: true });
+    let confirmation = window.confirm("Are you sure you want to delete the item?");
+    if (confirmation) {
+      this.state.deleteFromList(this.state.id);
+      this.setState({ redirect: true });
+    }
   };
 
   render() {
@@ -36,14 +45,14 @@ class Details extends Component {
         <div className="details-content">
           <div className="desktop-wrapper">
             <div className="content-img">
-              <img className="img-big" alt={this.props.location.name} src={this.props.location.img_url} />
+              <img className="img-big" alt={this.state.name} src={this.state.img_url} />
             </div>
             <div className="content-text">
-              <p className="title">{this.props.location.name}</p>
-              <p className="name">${this.props.location.price}</p>
+              <p className="title">{this.state.name}</p>
+              <p className="name">${this.state.price}</p>
             </div>
           </div>
-          <p className="description">{this.props.location.description}</p>
+          <p className="description">{this.state.description}</p>
         </div>
       </div>
     );

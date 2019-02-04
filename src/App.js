@@ -7,7 +7,7 @@ import NewItem from "./components/NewItem";
 import List from "./components/List";
 import logo from "./components/ic_menu.svg";
 import { CONSTANTS, ITEMS } from "./constants";
-
+  
 let items = ITEMS;
 
 class App extends Component {
