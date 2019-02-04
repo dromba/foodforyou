@@ -18,16 +18,12 @@ class ListItem extends Component {
         <Link className="text" to={this.itemObject}>
           <div className="row">
             <div className="first">
-              <img
-                className="img-small"
-                alt="burger"
-                src={this.props.item.img_url}
-              />
+              <img className="img-small" alt="burger" src={this.props.item.img_url} />
             </div>
             <div className="second">
               <div className="details">{this.props.item.name}</div>
             </div>
-            <div className="third">{this.props.item.price}</div>
+            <div className="third">${this.props.item.price}</div>
           </div>
         </Link>
       </li>

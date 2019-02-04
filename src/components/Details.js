@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
+
 import deleteIcon from "../icons/ic_delete_dark.svg";
 import backIcon from "../icons/ic_back.svg";
 
@@ -9,7 +10,6 @@ class Details extends Component {
     super(props);
 
     this.state = {
-      title: "DETAILS",
       redirect: false
     };
   }
@@ -36,11 +36,11 @@ class Details extends Component {
         <div className="details-content">
           <div className="desktop-wrapper">
             <div className="content-img">
-                <img className="img-big" alt={this.props.location.name} src={this.props.location.img_url} />
+              <img className="img-big" alt={this.props.location.name} src={this.props.location.img_url} />
             </div>
             <div className="content-text">
-                <p className="title">{this.props.location.name}</p>
-                <p className="name">{this.props.location.price}</p>
+              <p className="title">{this.props.location.name}</p>
+              <p className="name">${this.props.location.price}</p>
             </div>
           </div>
           <p className="description">{this.props.location.description}</p>

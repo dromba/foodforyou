@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import { CONSTANTS } from '../constants';
+import backIcon from "../icons/ic_back.svg";
 
 class NewItem extends Component {
   constructor(props) {
@@ -28,10 +32,16 @@ class NewItem extends Component {
       return <Redirect to="/" />;
     }
     return (
+      <>
+      <div className="top-bar">
+        <Link className="text" to="/">
+          <img alt="back" src={backIcon} className="logo top-bar-logo logo-back" />
+        </Link>
+      </div>
       <div className="new-item">
         <div className="new-item-row">
           <div className="input-title-wrapper">
-            <p className="input-title">Item Name</p>
+            <p className="input-title">{CONSTANTS.ITEM_NAME}</p>
           </div>
           <div className="input-wrapper">
             <input type="text" ref="name" />
@@ -39,7 +49,7 @@ class NewItem extends Component {
         </div>
         <div className="new-item-row">
           <div className="input-title-wrapper">
-            <p className="input-title">Image URL</p>
+            <p className="input-title">{CONSTANTS.IMAGE_URL}</p>
           </div>
           <div className="input-wrapper">
             <input type="text" ref="img_url" />
@@ -47,7 +57,7 @@ class NewItem extends Component {
         </div>
         <div className="new-item-row">
           <div className="input-title-wrapper">
-            <p className="input-title">Price</p>
+            <p className="input-title">{CONSTANTS.PRICE}</p>
           </div>
           <div className="input-wrapper">
             <input type="text" ref="price" />
@@ -55,20 +65,15 @@ class NewItem extends Component {
         </div>
         <div className="new-item-row">
           <div className="input-title-wrapper">
-            <p className="input-title">Description</p>
+            <p className="input-title">{CONSTANTS.DESCRIPTION}</p>
           </div>
           <div className="input-wrapper">
-            <textarea
-              className="input-description"
-              type="text"
-              ref="description"
-            />
+            <textarea className="input-description" type="text" ref="description" />
           </div>
         </div>
-        <button className="add-btn" onClick={this.handleClick}>
-          ADD ITEM
-        </button>
+        <button className="add-btn" onClick={this.handleClick}>{CONSTANTS.ADD_ITEM}</button>
       </div>
+      </>
     );
   }
 }

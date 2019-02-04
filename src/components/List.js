@@ -15,11 +15,7 @@ class List extends Component {
   populateList = () => {
     return this.items.map((el, i) => {
       return (
-        <ListItem
-          key={i}
-          item={el}
-          deleteFromList={this.props.deleteFromList}
-        />
+        <ListItem key={i} item={el} deleteFromList={this.props.deleteFromList} />
       );
     });
   };
