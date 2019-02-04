@@ -365,6 +365,7 @@ textarea {
   .logo-delete {
     position: static;
     float: right;
+    margin-right: 17px;
   }
 
   .desktop-wrapper {

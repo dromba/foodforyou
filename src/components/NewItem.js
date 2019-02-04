@@ -15,16 +15,20 @@ class NewItem extends Component {
   }
 
   handleClick = () => {
-    const item = {
-      id: this.props.location.newID,
-      name: this.refs.name.value,
-      img_url: this.refs.img_url.value,
-      price: this.refs.price.value,
-      description: this.refs.description.value
-    };
-
-    this.props.location.addItemToList(item);
-    this.setState({ redirect: true });
+    if (this.refs.name.value.length === 0 || this.refs.img_url.value.length === 0 || this.refs.price.value.length === 0 || this.refs.description.value.length === 0) {
+      window.alert("All fields are mandatory!");
+    } else {
+      const item = {
+        id: this.props.location.newID,
+        name: this.refs.name.value,
+        img_url: this.refs.img_url.value,
+        price: this.refs.price.value,
+        description: this.refs.description.value
+      };
+  
+      this.props.location.addItemToList(item);
+      this.setState({ redirect: true });
+    }  
   };
 
   render() {
