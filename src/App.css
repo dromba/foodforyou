@@ -55,6 +55,14 @@
   border: 1.5px solid #D8D8D8;
 }
 
+#myLinks {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  background-color: white;
+  box-shadow: 1px 2px #D8D8D8;
+}
+
 .topnav a {
   color: #282c34;
   text-align: center;
